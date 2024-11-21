@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import { useState } from "react";
 
 function App() {
-  let [currentClick, setcurrentClick] = useState(true);
+  let [currentClick, setcurrentClick] = useState(false);
   function onClickEvent() {
     setcurrentClick(true);
   }

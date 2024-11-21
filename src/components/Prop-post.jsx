@@ -1,10 +1,10 @@
 import style from './Project.module.css'
 
-function Props(props) {
+function Props({author,content}) {
     return(<>
         <li className={style.container}>
-            <p className={style.author}>{props.author}</p>
-            <p className={style.content}>{props.content}</p>
+            <p className={style.author}>{author}</p>
+            <p className={style.content}>{content}</p>
         </li>
         </>)
 }

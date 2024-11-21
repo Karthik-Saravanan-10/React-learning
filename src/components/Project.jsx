@@ -4,23 +4,22 @@ import { useState } from "react";
 import Modelbox from "./Modelbox";
 
 
-function Project(props) {
-    let [currentAuthor, setcurrentAuthor] = useState('');
-    let [currentContent, setcurrentContent] = useState('');
-    function eventContentHandler(e) {
-        setcurrentContent(e.target.value);
-    }
-    function eventAuthorHandler(e) {
-        setcurrentAuthor(e.target.value);
+function Project({isPost,currentClick}) {
+    let [entrySubmitData,setentrySubmitData]=useState([]);
+    function getDataInput(data){
+        setentrySubmitData((existingData)=>[data,...existingData]);
     }
     return (<>
-        {props.currentClick ?
-            <Modelbox clickEvent={props.isPost}>
-                <InputPost author={eventAuthorHandler} content={eventContentHandler} />
+        {currentClick ?
+            <Modelbox>
+                <InputPost hideInput={isPost} dataInput={getDataInput}/>
             </Modelbox> : null}
+        {entrySubmitData.length==0?
+        <h1>There is No Value Present</h1>:false}
         <ul>
-            <Props author={currentAuthor} content={currentContent} />
-            <Props author="KN" content="Bye!" />
+            {entrySubmitData.map((data)=><Props key={data.authorName} author={data.authorName} content={data.contentData} />)}
+            {/* <Props author={currentAuthor} content={currentContent} /> */}
+            {/* <Props author={entrySubmitData.authorName} content={entrySubmitData.contentData} /> */}
         </ul>
     </>)
 }
