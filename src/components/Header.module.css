@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 70px;
+    align-items: center;
+}
+
+h3{
+    color: aliceblue;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+button{
+    border: none;
+    width: 100px;
+    height: 36px;
+    border-radius: 8px;
+    opacity: 0.6;
+    font-weight: bold;
+}
+
+.moddialog{
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.modeldiv{
+    opacity: 0;
+}

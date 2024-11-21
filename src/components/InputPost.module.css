@@ -1,0 +1,36 @@
+form{
+    background-color: rgb(04, 04, 233);
+    display: inline-flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 8px;
+    color: white;
+}
+
+label{
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+textarea{
+    width: 270px;
+    height: 150px;
+    border-radius: 8px;
+    resize: none;
+    border: none;
+    background-color: rgb(174, 174, 233);
+    padding: 5px 10px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+input[type="text"]{
+    height: 30px;
+    border-radius: 8px;
+    border: none;
+    padding: 5px 10px;
+    font-size: 20px;
+    background-color: rgb(174, 174, 233);
+}
