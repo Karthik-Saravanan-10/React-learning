@@ -19,7 +19,7 @@ body{
     padding: 1px 70px;
     border-radius: 8px;
     opacity: 0.5;
-     box-shadow: 0px 2px 4px 0px #0000003D;
+    box-shadow: 0px 2px 4px 0px #0000003D;
 }
 
 ul{
@@ -27,4 +27,12 @@ ul{
     display: flex;
     gap: 10px;
     padding: 0;
+}
+
+p{
+    color: white;
+}
+
+.container p{
+    color: black;
 }
